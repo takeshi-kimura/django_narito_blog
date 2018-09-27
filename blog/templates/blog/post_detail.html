@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="card mb-3">
+        <h2 class="card-header bg-dark text-white">{{ post.title }}</h2>
+        <div class="card-body">
+            {{ post.text | linebreaksbr | urlize }}
+            <br>
+            <br>
+            <p> 更新日： {{ post.created_at }} </p>
+            <p>カテゴリー： {{ post.category }} </p>
+        </div>
+    </div>
+{% endblock %}
